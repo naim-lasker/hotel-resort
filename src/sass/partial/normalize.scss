@@ -1,11 +1,4 @@
-@import 'partial/mixins';
-
-nav {
-    height: 100px;
-    line-height: 100px;
-    padding: 0 64px !important;
-}
-
+@import 'mixins';
 .hr-button-main {
     @include button-style;
     background: $primary;
@@ -25,5 +18,27 @@ nav {
     &:hover {
         background: $primary;
         color: $white;
+    }
+}
+
+.moving-icon {
+    position: relative;
+    -webkit-animation: mymove 2s infinite;
+    animation: mymove 2s infinite;
+    @-webkit-keyframes mymove {
+        from {
+            left: 0px;
+        }
+        to {
+            left: 40px;
+        }
+    }
+    @keyframes mymove {
+        from {
+            left: 0px;
+        }
+        to {
+            left: 40px;
+        }
     }
 }

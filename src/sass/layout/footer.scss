@@ -1,0 +1,63 @@
+.footer {
+    background: #212121;
+    padding: 36px 0 16px;
+    .connect {
+        h4 {
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .icons {
+            margin-top: 16px;
+            i {
+                color: $white;
+                font-size: 16px;
+                margin-right: 12px;
+            }
+        }
+    }
+    .newsletter {
+        h4 {
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        button {
+            padding: 12px 60px 12px 24px;
+        }
+    }
+    .certificate {
+        h4 {
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        img {
+            height: 50px;
+            width: 100px;
+        }
+    }
+    .reserved {
+        padding: 0 84px;
+        text-align: center;
+        margin-top: 48px;
+        hr {
+            background: $primary;
+        }
+        p {
+            color: $white;
+            font-size: 15px;
+            font-weight: 700px;
+            a {
+                color: $primary;
+                &:hover {
+                    text-decoration: none;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
