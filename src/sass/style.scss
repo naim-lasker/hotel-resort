@@ -1,3 +1,8 @@
-body {
-    background: green;
-}
+// Import Partial Files
+@import 'partial/reset';
+@import 'partial/normalize';
+
+// Import Main Files
+@import 'layout/home';
+// @import 'layout/admin';
+// @import 'layout/investor'

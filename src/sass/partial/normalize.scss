@@ -1,0 +1,29 @@
+@import 'partial/mixins';
+
+nav {
+    height: 100px;
+    line-height: 100px;
+    padding: 0 64px !important;
+}
+
+.hr-button-main {
+    @include button-style;
+    background: $primary;
+    color: $white;
+    border: 1px solid $primary;
+    &:hover {
+        background: $white;
+        color: $black;
+    }
+}
+
+.hr-button {
+    @include button-style;
+    background: $white;
+    color: $gray;
+    border: 1px solid $primary;
+    &:hover {
+        background: $primary;
+        color: $white;
+    }
+}
