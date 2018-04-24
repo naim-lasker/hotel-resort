@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+
     <!-- AOS CSS CDN Link -->
     <link rel="stylesheet" href="dist/aos.css">
 
@@ -22,16 +24,18 @@
     <link rel="stylesheet" href="dist/bundle.css">
 </head>
 
-<body>
+<body id="top">
 
-    <!-- Top Header Starts Here -->
-    <section class="top-header">
-
-    </section>
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
 
     <!-- Nav Bar Starts Here-->
-    <header class="navbar navbar-expand-lg" data-spy="affix">
-        <a class="navbar-brand" href="#">
+    <header class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -41,24 +45,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">home</a>
+                    <a class="nav-link" href="index.html">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">rooms&amp;suites</a>
+                    <a class="nav-link" href="about.html">about</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">about</a>
+                    <a class="nav-link" href="events.html">events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">contact us</a>
+                    <a class="nav-link" href="contact-us.html">contact us</a>
                 </li>
             </ul>
         </div>
     </header>
-    <!-- NAv Bar Ends Here-->
+    <!-- Nav Bar Ends Here-->
 
 
     <!-- Carousel Starts Here-->
@@ -142,13 +143,30 @@
         </div>
 
         <!-- Book Now Box Start Here -->
-        <div class="book-now" data-aos-offset="200" data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-easing="ease-in-sine"
-            data-aos-delay="2000">
+        <div class="book-now" data-aos-offset="200" data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-easing="ease-in-sine">
             <h2>Book Now</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-            <button class="hr-button">From</button>
-            <button class="hr-button">To</button>
-            <button class="hr-button-main">Check Availabity</button>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group date width-180">
+                        <input type="text" id="homeFrom" name="from" class="form-control" placeholder="From">
+                        <label class="input-group-addon btn" for="homeFrom">
+                            <span class="fa fa-calendar"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group date width-180">
+                        <input type="text" id="homeTo" name="to" class="form-control" placeholder="To">
+                        <label class="input-group-addon btn" for="homeTo">
+                            <span class="fa fa-calendar"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="hr-button-main">Check Availabity</button>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Book Now Box End Here -->
@@ -272,11 +290,8 @@
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                         has been the industry's standard dummy text ever since the 1500s, when an unknown
                                         printer took a galley of type and scrambled it to make a type specimen book. It has
-                                        survived not only five centuries.</p>
-                                    <button class="hr-button-main">
-                                        Read More
-                                        <i class="fas fa-arrow-right moving-icon"></i>
-                                    </button>
+                                        survived not only five centuries. Been the industry's standard dummy text ever since when an unknown
+                                        printer took a galley of type and scrambled.</p>
                                 </div>
                             </div>
 
@@ -349,7 +364,6 @@
     </section>
     <!-- Activites Section Starts Here -->
 
-
     <!-- Footer Starts Here -->
     <footer class="footer">
         <div class="container">
@@ -398,19 +412,32 @@
     <!-- Footer Ends Her -->
 
 
-    <!-- Bootstrap JS CDN Link -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <!-- Go to Top -->
+    <div id="back-top">
+        <a title="Go to Top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
     <!-- AOS JS CDN Link -->
     <script src="dist/aos.js"></script>
 
     <!-- Bundled JS File -->
     <script src="dist/bundle.js"></script>
+
+    <!-- Preloader Js File -->
+    <script src="src/js/preloader.js"></script>
 </body>
 
 </html>
